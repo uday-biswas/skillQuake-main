@@ -59,7 +59,7 @@ const Footer = () => {
                   <FaInstagram />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/mohan2003"
+                  href="https://www.linkedin.com/in/udaybiswas944"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -67,7 +67,7 @@ const Footer = () => {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://github.com/mohansahu18"
+                  href="https://github.com/uday-biswas"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -156,7 +156,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Copyrights reserved @StudyNotion ❤️</div>
+          <div className="text-center">Copyrights reserved @SkillQuake ❤️</div>
           <div className="text-center">Developer: Uday Biswas ❤</div>
         </div>
       </div>
