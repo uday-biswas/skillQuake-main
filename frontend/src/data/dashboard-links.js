@@ -1,4 +1,4 @@
-import { ACCOUNT_TYPE } from '../utils/constant'
+import { ACCOUNT_TYPE } from "../utils/constant";
 const SidebarLinks = [
   {
     id: 1,
@@ -43,4 +43,4 @@ const SidebarLinks = [
   },
 ];
 
-export default SidebarLinks
+export default SidebarLinks;
