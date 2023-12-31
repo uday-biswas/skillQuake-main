@@ -1,14 +1,16 @@
+//here, we are returning a formatted date string that looks like this: "January 1, 2021 | 12:00 PM"
+
 export const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "long", day: "numeric" }
-    const date = new Date(dateString)
-    const formattedDate = date.toLocaleDateString("en-US", options)
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  const date = new Date(dateString);
+  const formattedDate = date.toLocaleDateString("en-US", options);
 
-    const hour = date.getHours()
-    const minutes = date.getMinutes()
-    const period = hour >= 12 ? "PM" : "AM"
-    const formattedTime = `${hour % 12}:${minutes
-        .toString()
-        .padStart(2, "0")} ${period}`
+  const hour = date.getHours();
+  const minutes = date.getMinutes();
+  const period = hour >= 12 ? "PM" : "AM";
+  const formattedTime = `${hour % 12}:${minutes
+    .toString()
+    .padStart(2, "0")} ${period}`;
 
-    return `${formattedDate} | ${formattedTime}`
-}
+  return `${formattedDate} | ${formattedTime}`;
+};

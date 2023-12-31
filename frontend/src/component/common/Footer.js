@@ -1,13 +1,36 @@
 import React from "react";
-import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
-
-// Images
-import Logo from "../../assets/Logo/Logo-Full-Light.png";
-
-// Icons
+import Logo from "../../assets/Logo/Logo-Small-Light.png";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { BsFilePerson } from "react-icons/bs";
+
+const FooterLink2 = [
+  {
+    title: "Subjects",
+    links: [
+      { title: "Al", link: "/al" },
+      { title: "Cloud Computing", link: "/cloud-computing" },
+      { title: "Code Foundations", link: "/code-foundations" },
+      { title: "Computer Science", link: "/computer-science" },
+      { title: "Cybersecurity", link: "/cybersecurity" },
+      { title: "Data Analytics", link: "/data-analytics" },
+      { title: "Data Science", link: "/data-science" },
+      { title: "Data Visualization", link: "/data-visualization" },
+    ],
+  },
+  {
+    title: "Languages",
+    links: [
+      { title: "Bash", link: "/bash" },
+      { title: "C++", link: "/c++" },
+      { title: "C#", link: "/csharp" },
+      { title: "Go", link: "/go" },
+      { title: "HTML & CSS", link: "/html-css" },
+      { title: "Java", link: "/java" },
+      { title: "JavaScript", link: "/javascript" },
+      { title: "Kotlin", link: "/kotlin" },
+    ],
+  },
+];
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
@@ -16,9 +39,6 @@ const Resources = [
   "Chart Sheet",
   "Code challenges",
   "Docs",
-  "Projects",
-  "Videos",
-  "Workspaces",
 ];
 const Plans = ["Paid memberships", "For students", "Business solutions"];
 const Community = ["Forums", "Chapters", "Events"];
@@ -31,7 +51,12 @@ const Footer = () => {
           {/* Section 1 */}
           <div className="lg:w-[50%]   flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
             <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-              <img src={Logo} alt="" className="object-contain" />
+              <div className="flex">
+                <img src={Logo} alt="" className="w-[35px]" />
+                <div className="text-white text-2xl font-semibold ml-2">
+                  SkillQuake
+                </div>
+              </div>
               <h1 className="text-richblack-50 font-semibold text-[16px]">
                 Company
               </h1>

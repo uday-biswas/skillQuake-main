@@ -1,3 +1,12 @@
+//before return statement
+//firstly take the token , user details and total items from redux store
+//then fetch the sublinks from the api and create a function to check the route to make the navbar links active
+//for return statement
+//put the logo, then map through the navbar links array {home, catalog, about, contact} and put the links inside li tag.
+//if the title is catalog then put the sublinks inside the div tag and map through the sublinks array and
+// put the links inside li tag which will be shown on hover.
+//then put the login & signup button if token is null else put the cart with totalItems and profile dropdown button.
+
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, matchPath } from "react-router-dom";
 import logo from "../../assets/Logo/Logo-Small-Light.png";
@@ -10,7 +19,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { apiConnector } from "../../services/apiConnector";
 import { courseEndpoints } from "../../services/api";
 import { FiMenu } from "react-icons/fi";
-import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
+import { BiRightArrow } from "react-icons/bi";
 import { GiCancel } from "react-icons/gi";
 const Header = () => {
   const { token } = useSelector((store) => store.auth);
@@ -70,7 +79,7 @@ const Header = () => {
 
           {/* nav links */}
           <nav>
-            <ul className="flex gap-x-6 text-richblack-25">
+            <ul className="flex gap-x-6 text-richblack-25 font-semibold">
               {NavbarLinks?.map((element, index) => (
                 <li key={index}>
                   {element?.title === "Catalog" ? (
@@ -149,7 +158,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* for mobil */}
+      {/* for mobile */}
       <div
         className={` md:hidden flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 transition-all duration-200"} `}
       >

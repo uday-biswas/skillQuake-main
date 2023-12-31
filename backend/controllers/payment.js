@@ -11,6 +11,10 @@ const {
 const { paymentSuccessEmail } = require("../mail template/paymentSuccessEmail");
 
 // Capture the payment and initiate the Razorpay order
+//its taking courses and userId from the request body
+//then it calls the enrollStudents function to enroll the student in the courses
+//then it sends a response with the success as true.
+
 exports.capturePayment = async (req, res) => {
   const { courses } = req.body;
   const userId = req.user.id;
@@ -20,7 +24,8 @@ exports.capturePayment = async (req, res) => {
       message: "Please Provide Course ID",
     });
   }
-  await enrollStudents(courses, userId, res);
+  const enrollres = await enrollStudents(courses, userId, res);
+  console.log("enrollres", enrollres);
 
   // let total_amount = 0
 
@@ -161,6 +166,12 @@ exports.sendPaymentSuccessEmail = async (req, res) => {
 };
 
 // enroll the student in the courses
+//its taking courses, userId and res as a parameter
+//then for each courseId in courses it will find the course and push the userId in the studentEnroll array
+//then it will create a courseProgress document with courseId and userId.
+//then it will find the student and push the courseId and courseProgressId in the courses and courseProgress array respectively
+//then it sends a email to the enrolled student using mailSender function along with the courseEnrollmentEmail template
+
 const enrollStudents = async (courses, userId, res) => {
   if (!courses || !userId) {
     return res.status(400).json({

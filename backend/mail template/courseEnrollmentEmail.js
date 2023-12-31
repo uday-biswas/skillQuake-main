@@ -1,8 +1,8 @@
-require("dotenv").config()
-const FRONTEND_URL = process.env.FRONTEND_URL
+require("dotenv").config();
+const FRONTEND_URL = process.env.FRONTEND_URL;
 
 exports.courseEnrollmentEmail = (courseName, name) => {
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
     <html>
     
     <head>
@@ -71,7 +71,7 @@ exports.courseEnrollmentEmail = (courseName, name) => {
     <body>
         <div class="container">
             <a href=${FRONTEND_URL}><img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"
-                    alt="StudyNotion Logo"></a>
+                    alt="SkillQuake Logo"></a>
             <div class="message">Course Registration Confirmation</div>
             <div class="body">
                 <p>Dear ${name},</p>
@@ -82,7 +82,7 @@ exports.courseEnrollmentEmail = (courseName, name) => {
                 <a class="cta" href="${FRONTEND_URL}/dashboard">Go to Dashboard</a>
             </div>
             <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-                    href="mailto:rr1615075@gmail.com">info@studynotion.com</a>. We are here to help! <br>Developed by ~ Mohan sahu ❤  </div>
+                    href="mailto:rr1615075@gmail.com">info@skillquake.com</a>. We are here to help! <br>Developed by ~ Mohan sahu ❤  </div>
         </div>
     </body>
     

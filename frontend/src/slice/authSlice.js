@@ -1,3 +1,7 @@
+//the state contains the token, loading, and signupData
+//slice name is auth
+//reducers are setToken, setLoading, and setSignupData
+
 import { createSlice } from "@reduxjs/toolkit";
 
 console.log("token from local storage", localStorage.getItem("token"));

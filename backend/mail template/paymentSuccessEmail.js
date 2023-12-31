@@ -1,7 +1,7 @@
-require("dotenv").config()
-const FRONTEND_URL = process.env.FRONTEND_URL
+require("dotenv").config();
+const FRONTEND_URL = process.env.FRONTEND_URL;
 exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
       <html>
       
       <head>
@@ -70,7 +70,7 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
       <body>
           <div class="container">
               <a href="${FRONTEND_URL}"><img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"
-                      alt="StudyNotion Logo"></a>
+                      alt="SkillQuake Logo"></a>
               <div class="message">Course Payment Confirmation</div>
               <div class="body">
                   <p>Dear ${name},</p>
@@ -79,9 +79,9 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
                   <p>Your Order ID is <b>${orderId}</b></p>
               </div>
               <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-                      href="mailto:rr1615075@gmail.com">info@studynotion.com</a>. We are here to help! <br>Developed by ~ Suman Das ❤  </div>
+                      href="mailto:rr1615075@gmail.com">info@skillquake.com</a>. We are here to help! <br>Developed by ~ Suman Das ❤  </div>
           </div>
       </body>
       
-      </html>`
-}
+      </html>`;
+};

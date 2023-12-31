@@ -28,6 +28,10 @@ function loadScript(src) {
 }
 
 // Buy the Course
+//its using apiConnector function to make a instance of axios to send a post request to the COURSE_PAYMENT_API to enroll students in the courses
+//if the response is success then it will dispatch the resetCart action to reset the cart and navigate to the enrolled courses page
+//if the response is not success then it will show a toast with the message from the response
+
 export async function BuyCourse(
   token,
   courses,
@@ -52,6 +56,7 @@ export async function BuyCourse(
     // }
 
     // // Initiating the Order in Backend
+    console.log("courses: ", courses);
     const orderResponse = await apiConnector(
       "POST",
       COURSE_PAYMENT_API,
@@ -62,6 +67,7 @@ export async function BuyCourse(
         Authorization: `Bearer ${token}`,
       }
     );
+    console.log("orderResponse", orderResponse);
 
     // if (!orderResponse.data.success) {
     //   throw new Error(orderResponse.data.message);
@@ -77,7 +83,7 @@ export async function BuyCourse(
     //   currency: orderResponse.data.data.currency,
     //   amount: `${orderResponse.data.data.amount}`,
     //   order_id: orderResponse.data.data.id,
-    //   name: "StudyNotion",
+    //   name: "SkillQuake",
     //   description: "Thank you for Purchasing the Course.",
     //   image: rzpLogo,
     //   prefill: {

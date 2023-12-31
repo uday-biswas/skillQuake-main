@@ -1,3 +1,7 @@
+//state contains user and loading
+//slice name is profile
+//reducers are setUser and setLoading
+
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {

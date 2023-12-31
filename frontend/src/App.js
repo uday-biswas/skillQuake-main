@@ -70,23 +70,25 @@ function App() {
           >
             {/* add account type validations */}
             <Route path="/dashboard/my-profile" element={<MyProfile />} />
-            <Route path="/dashboard/settings" element={<Settings />} />
-            <Route
-              path="/dashboard/edit-course/:courseId"
-              element={<EditCourse />}
-            />
             <Route
               path="/dashboard/enrolled-courses"
               element={<EnrolledCourses />}
             />
+            <Route path="/dashboard/cart" element={<Cart />} />
+
+            <Route
+              path="/dashboard/edit-course/:courseId"
+              element={<EditCourse />}
+            />
             <Route path="/dashboard/add-course" element={<AddCourse />} />
             <Route path="/dashboard/instructor" element={<Instructor />} />
             <Route path="/dashboard/my-courses" element={<MyCourses />} />
+
+            <Route path="/dashboard/settings" element={<Settings />} />
           </Route>
 
           <Route path="/catalog/:catalogName" element={<Catalog />} />
           <Route path="/courses/:courseId" element={<CourseDetails />} />
-          <Route path="/dashboard/cart" element={<Cart />} />
 
           <Route
             element={
