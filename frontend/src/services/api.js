@@ -2,7 +2,7 @@
 
 const BASE_URL = window.location.origin.includes(3000)
   ? window.location.origin.replace("3000", "4000/api/v1")
-  : process.env.REACT_APP_BASE_URL;
+  : process.env.REACT_APP_BASE_URL + "/api/v1";
 // const BASE_URL = window.location.origin.replace(":3000", ":4000/api/v1");
 
 // AUTH ENDPOINT
