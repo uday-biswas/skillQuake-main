@@ -1,8 +1,6 @@
 //this file contains all the endpoints of the backend api
 
-const BASE_URL = window.location.origin.includes(3000)
-  ? window.location.origin.replace("3000", "4000/api/v1")
-  : process.env.REACT_APP_BASE_URL;
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 // const BASE_URL = window.location.origin.replace(":3000", ":4000/api/v1");
 
 // AUTH ENDPOINT
