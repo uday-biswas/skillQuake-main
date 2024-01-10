@@ -81,7 +81,7 @@ const otpTemplate = (otp) => {
 				Once your account is verified, you will have access to our platform and its features.</p>
 			</div>
 			<div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-					href="mailto:rr1615075@gmail.com">info@skillquake.com</a>. We are here to help! <br>Developed by ~ Mohan Sahu ❤  </div>
+					href="mailto:rr1615075@gmail.com">info@skillquake.com</a>. We are here to help! <br>Developed by ~ Uday Biswas ❤  </div>
 		</div>
 	</body>
 	
