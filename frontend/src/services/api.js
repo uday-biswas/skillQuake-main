@@ -1,6 +1,7 @@
 //this file contains all the endpoints of the backend api
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+// const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL =  window.location.origin.replace(":3000", ":4000/api/v1");
 
 // AUTH ENDPOINTS
 export const endpoints = {
