@@ -33,6 +33,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "build": "react-scripts build",
     "start": "react-scripts start",
     "server": "cd .. && cd backend && npm run server",
     "dev": "concurrently -n \"frontend,backend\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
