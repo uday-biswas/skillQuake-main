@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Building image') {
             steps {
-                echo 'building the app'
+                echo "building the docker image"
+                withCredentials([string(credentialsId: 'dockerhub_credentials', userVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
+                    sh 'docker build -t udaybiswas944/skillquake:latest .'
+                    sh "echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin"
+                    sh 'docker push udaybiswas944/skillquake:latest'
+                }
             }
         }
         stage('Test') {
