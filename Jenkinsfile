@@ -23,10 +23,12 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                script {
                 echo 'Deploying the app'
                 def dockerCmd = 'docker run --env-file skillquake/backend/.env --env-file skillquake/frontend/.env -p 3000:3000 -p 4000:4000 -t udaybiswas944/skillquake'
                 sshagent(['azure-skillquake-ssh-private-key']) {
                     sh "ssh -o StrictHostKeyChecking=no azureuser@20.224.165.213 ${dockerCmd}"
+                }
                 }
             }
         }
